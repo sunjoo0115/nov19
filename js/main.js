@@ -16,3 +16,19 @@ const moveSlider = () =>{
     }
 };
 setInterval(moveSlider,2000);
+
+const openBtn = document.querySelector(".open_btn");
+const closeBtn = document.querySelector(".close_btn");
+const modal = document.querySelector(".modal");
+const overlay = modal.querySelector(".modal_overlay");
+
+const openModal = () =>{
+    modal.classList.remove("hidden");
+}
+const closeModal = () =>{
+    modal.classList.add("hidden");
+}
+
+openBtn.addEventListener("click",openModal);
+closeBtn.addEventListener("click",closeModal);
+overlay.addEventListener("click",closeModal);
